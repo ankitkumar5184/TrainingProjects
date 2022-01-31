@@ -16,26 +16,19 @@ public class Facebook {
         String mobileNo = RandomStringUtils.randomNumeric(10);
         String userPassword = RandomStringUtils.randomAlphanumeric(8);
 
-
-
         driver.get("https://www.facebook.com/");
         driver.manage().window().maximize();
         driver.findElement(By.linkText("Create New Account")).click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
 
-
         //second question
         driver.findElement(By.xpath("//button[@class='_6j mvm _6wk _6wl _58mi _3ma _6o _6v']/parent::div[@class='_1lch']"
                 + "/preceding-sibling::div[@id='fullname_field']//child::input[@name='firstname']")).sendKeys(firstName);
-
-
-
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
 
 
         //fourth question
         driver.findElement(By.xpath("//input[@name='reg_passwd__']//preceding::input[@name='reg_email__']")).sendKeys(mobileNo);
-
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
 
 
