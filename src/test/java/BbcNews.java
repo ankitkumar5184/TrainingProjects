@@ -16,7 +16,7 @@ public class BbcNews {
 
         List<WebElement> link = driver.findElements(By.tagName("a"));
         System.out.println(link.size());
-        for (int i = 0; i < link.size(); i++) {
+        for(int i = 0; i < link.size(); i++) {
             String li = link.get(i).getText();
 
 
