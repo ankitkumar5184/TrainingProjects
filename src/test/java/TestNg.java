@@ -6,6 +6,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+
 public class TestNg {
     public String url = "https://www.google.com/";
     String driverpath = "driver/chromedriver.exe";
