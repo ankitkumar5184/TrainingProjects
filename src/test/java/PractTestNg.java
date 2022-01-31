@@ -17,7 +17,6 @@ public class PractTestNg {
     @AfterMethod
     public void afterMethod(){
         System.out.println("After Method");
-
     }
 
     @BeforeClass
