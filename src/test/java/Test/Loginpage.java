@@ -24,15 +24,12 @@ public class Loginpage extends BaseClass {
         for(int i=1;i<=sheet.getLastRowNum();i++)
         {
             uname = sheet.getRow(i).getCell(0).getStringCellValue();
-            driver.findElement(By.id("txtUsername")).sendKeys(uname);
+            //driver.findElement(By.id("txtUsername")).sendKeys(uname);
+            driver.findElement(By.name("txtUsername")).sendKeys(uname);
             pass = sheet.getRow(i).getCell(1).getStringCellValue();
             driver.findElement(By.id("txtPassword")).sendKeys(pass);
 
-            FileOutputStream df = new FileOutputStream(path);
-            message = "Data imported Successfully";
-            sheet.getRow(i).createCell(4).setCellValue(message);
-            wb.write(df);
-            df.close();
+
             driver.findElement(By.id("btnLogin")).click();
 
         }
