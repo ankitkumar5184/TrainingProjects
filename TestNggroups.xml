@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/AnkitKumar/IdeaProjects/TrainingProject/src/test/java/Groups/TestNGroups">
+        <classes>
+            <class name="Groups.TestNGroups.Car_Loan">
+                <methods>
+                    <include name="WebLoginCarLoan"/>
+                    <include name="MobileLoginCarLoan"/>
+                </methods>
+            </class>
+            <class name="Groups.TestNGroups.Home_Loan">
+                <methods>
+                <include name="WebLoginHomeLoan"/>
+                <include name="APILoginHomeLoan"/>
+                </methods>
+            </class>
+            <class name="Groups.TestNGroups.Personal_Loan">
+            <methods>
+                <include name="MobileLoginPersonalLoan"/>
+                <include name="APILoginPersonalLoan"/>
+            </methods>
+        </class>
+        </classes>
+    </test>
+</suite>
