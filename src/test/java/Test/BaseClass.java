@@ -21,7 +21,7 @@ public class BaseClass {
     WebDriverManager.chromedriver().setup();
     driver = new ChromeDriver();
     driver.get("https://opensource-demo.orangehrmlive.com/index.php");
-
+    path = System.getProperty("user.dir")+"//Excel_Sheet//loginData.xlsx";
 
 
 
