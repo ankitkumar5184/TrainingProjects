@@ -2,6 +2,7 @@ package Groups;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
@@ -19,7 +20,11 @@ public class GroupDemo {
 
     }
     @Test(groups = {"Smoke"})
-    public void login(){
+    public void login() throws InterruptedException {
+        driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+        driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+        driver.findElement(By.id("btnLogin")).click();
+        Thread.sleep(4000);
         System.out.println("Login Demo");
     }
     @Test(groups = "Sanity")
