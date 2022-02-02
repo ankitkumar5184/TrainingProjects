@@ -8,7 +8,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class DataProvider {
-
     static String path;
     static WebDriver driver;
     FileInputStream fis;
